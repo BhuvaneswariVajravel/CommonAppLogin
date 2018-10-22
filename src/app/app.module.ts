@@ -1,19 +1,20 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { appRouting } from './app.routing';
 
-import { LoginModule} from './login/login.module';
+import { LoginModule} from './components/login/login.module';
+import { SharedModule } from './shared/shared.module';
+
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
-    BrowserModule,
-    ReactiveFormsModule,
+    BrowserModule,   
     appRouting,
-    LoginModule
+    LoginModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
