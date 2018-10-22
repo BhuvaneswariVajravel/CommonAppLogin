@@ -1,7 +1,7 @@
 import { Routes, RouterModule } from "@angular/router";
 import { LoginComponent} from './login.component';
 const loginRoutes: Routes = [
-    { path:"login", component:LoginComponent}
+    { path:"", component:LoginComponent}
 ];
 
-export const loginRouting = RouterModule.forRoot(loginRoutes)
+export const loginRouting = RouterModule.forChild(loginRoutes)

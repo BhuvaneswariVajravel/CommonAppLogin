@@ -4,10 +4,13 @@ import { loginRouting } from './login.routing';
 import { SharedModule } from '../../shared/shared.module';
 @NgModule({
   imports: [
-  SharedModule
-    //loginRouting
+  SharedModule,
+  loginRouting
   ],
-  declarations: [LoginComponent],
-  //exports:[LoginComponent]
+  declarations: [LoginComponent] 
 })
-export class LoginModule { }
+export class LoginModule {
+  constructor(){
+    console.log("i n in login module==========")
+  }
+ }

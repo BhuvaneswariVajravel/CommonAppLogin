@@ -3,9 +3,6 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { appRouting } from './app.routing';
 
-import { LoginModule} from './components/login/login.module';
-import { SharedModule } from './shared/shared.module';
-
 @NgModule({
   declarations: [
     AppComponent
@@ -13,8 +10,6 @@ import { SharedModule } from './shared/shared.module';
   imports: [
     BrowserModule,   
     appRouting,
-    LoginModule,
-    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
