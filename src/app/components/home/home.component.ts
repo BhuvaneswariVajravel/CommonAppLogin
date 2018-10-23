@@ -1,12 +1,12 @@
 import { Component } from "@angular/core";
-
+import { AuthGuard} from '../../shared/auth-guard';
 
 @Component({
     selector: 'app-home',
-    template: `<shared></shared>`
+    template: `<div></div>`
 })
 export class HomeComponent {
-    constructor(){
+    constructor(private rs: AuthGuard){
         console.log("in home==========");
     }
 }

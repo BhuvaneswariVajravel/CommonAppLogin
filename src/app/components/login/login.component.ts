@@ -2,15 +2,17 @@ import { Component } from "@angular/core";
 import { FormBuilder,FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router, ActivatedRoute} from '@angular/router';
 
+import { LoginService } from './login.service';
+import { AuthGuard} from '../../shared/auth-guard';
 
 @Component({
     selector: 'app-login',
-    templateUrl: "login.component.html"
+    templateUrl: "login.component.html",
 })
 export class LoginComponent {
     loginForm: FormGroup;
     submitted = false;
-    constructor(private fb: FormBuilder, private rs: Router) {
+    constructor(private fb: FormBuilder, private rs: Router, private loginService: LoginService) {
     }
     ngOnInit() {
         this.loginForm = this.fb.group({
@@ -19,7 +21,7 @@ export class LoginComponent {
         });
     }
 
-    login(form){
+    login(){
         this.submitted = true;
         console.log("formsubmitted=========");
         this.rs.navigate(['/home']);
